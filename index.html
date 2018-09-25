@@ -10,8 +10,8 @@
    <style>
    .hero-animation 
    {
-    width: 100vw;
-    height: 50vh;
+    width: 100%;
+    height: 50%;
    }
   body {
     background-color: white; color: black;
@@ -92,14 +92,13 @@ figure {
 </style>
 <section class="hero">
 <div class="hero-animation">
-<video id="zeek-video" class="video-js vjs-fluid vjs-default-skin" controls preload="auto" data-setup='{}'>
+<video style="width: 600px; height: 200px;" id="zeek-video" class="video-js vjs-fluid vjs-default-skin" controls preload="auto" data-setup='{}'>
   <source
      src="https://stream.mux.com/GhxDyDTZ6OhGGRAgS00zyZLmIi2uC00VYn.m3u8"
      type="application/x-mpegURL">
 </video>
 </div>
 </section>
-<h1>Homes by Zeek</h1>
 
 <main>
 
@@ -113,6 +112,8 @@ figure {
     <script>
 var player = videojs('my_video_1');
 player.play();
+var width = 600;
+var height = 200;
 </script>
 <script src="/luminous-master/dist/Luminous.js"></script>
 <script>
