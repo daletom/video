@@ -268,7 +268,27 @@ a {
   }
 
 }
-
+/*nav bar*/
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 2em;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
 /* ==========================================================================
    Gallery
    ========================================================================== */
@@ -347,7 +367,14 @@ a {
 }
 </style>
   </head>
-<body>
+  <body>
+<div class="topnav">
+  <a href="https://thedales.me/">Home</a>
+  <a href="https://thedales.me/tom">Tom</a>
+  <a href="https://thedales.me/heather">Heather</a>
+  <a href="https://thedales.me/zeek">Zeek</a>
+  <a class="active" href="https://thedales.me/video">Video</a>
+</div>
   <div class="wrap">
     <a href="#vid-gallery" class="btn btn-primary btn-has-icon vid-popup">
       <span class="icon octicon octicon-playback-play"></span>
