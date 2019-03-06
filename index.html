@@ -156,30 +156,20 @@
   <a class="active" href="https://thedales.me/video">Video</a>
 </div>
 <h1> Currently Under Construction</h1>
-        <div id="video-gallery">
-  <a href="https://www.youtube.com/watch?v=vSZ0uPby15c" data-poster="https://img.youtube.com/vi/vSZ0uPby15c/mqdefault.jpg" >
-      <img src="https://img.youtube.com/vi/vSZ0uPby15c/mqdefault.jpg" />
-  </a>
-  <a href="https://www.youtube.com/watch?v=2hHQos5-4hg" data-poster="https://img.youtube.com/vi/2hHQos5-4hg/mqdefault.jpg" >
-      <img src="https://img.youtube.com/vi/2hHQos5-4hg/mqdefault.jpg" />
-  </a>
-  <a href="https://www.youtube.com/watch?v=SiBxrnLC164" data-poster="https://img.youtube.com/vi/SiBxrnLC164/mqdefault.jpg" >
-      <img src="https://img.youtube.com/vi/SiBxrnLC164/mqdefault.jpg" />
-  </a>
-        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
-        <script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
-        <script src="/js/lg-video.js"></script>
-        <script>
-            lightGallery(document.getElementById('lightgallery'));
-        </script>
-        <script>
-        lightGallery(document.getElementById('video-gallery')); 
-    </script>
+       <video id="myVideo" controls></video>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@0.8.2"></script>
+<script>
+  (function(){
+    var playbackId = "GvgMD02G02mv0200fDiP71cLF9RrbRlEq8V9";
+    var url = "https://stream.mux.com/"+playbackId+".m3u8";
+    if (Hls.isSupported()) {
+      var video = document.getElementById("myVideo");
+      var hls = new Hls();
+      hls.loadSource(url);
+      hls.attachMedia(video);
+    }
+  })();
+</script>
     </body>
 </html>
